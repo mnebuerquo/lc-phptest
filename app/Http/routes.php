@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::model('routes', 'Route');
+Route::model('stops', 'Stop');
+Route::model('locations', 'Location');
+ 
+Route::resource('locations', 'LocationsController');
+Route::resource('routes', 'RoutesController');
+Route::resource('routes.stops', 'StopsController');
